@@ -1,3 +1,53 @@
+body {
+  background-color: #ffffff;
+  color: #171e2b;
+}
+
 .App {
   text-align: center;
+}
+
+.header {
+  display: grid;
+  grid-template-areas: "logo nav";
+  background-color: #FFF2E1;
+}
+
+.nav {
+  grid-area: nav;
+  width: auto;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  align-items: center;
+  justify-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: #171e2b;
+}
+
+.logo {
+  margin-left: 10%;
+  height: 55px;
+}
+
+.burger {
+  display: none;
+  border: none;
+  background-color: transparent;
+}
+
+@media (max-width: 700px) {
+  .header {
+    grid-template-areas: "logo burger" "nav nav";
+  }
+  .nav {
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: none;
+    grid-row-gap: 20px;
+  }
+  .burger {
+    display: block;
+  }
 }

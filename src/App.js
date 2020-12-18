@@ -1,9 +1,15 @@
 import './App.css';
 
+import IngredientForm from './components/IngredientForm'
+import NavigationBar from './components/NavigationBar';
+
 function App() {
   return (
     <div className="App">
-      <h1>Loft Bakes</h1>
+      <NavigationBar />
+      <h1>ELVTD KTCHN</h1>
+      <h2>High Altitude Recipe Converter</h2>
+      <IngredientForm />
     </div>
   );
 }
